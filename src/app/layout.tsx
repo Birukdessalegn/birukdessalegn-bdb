@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     template: `%s • ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: {
+    // Uses the app router's built-in `src/app/favicon.ico` by default
+    icon: [{ url: "/favicon.ico" }],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,

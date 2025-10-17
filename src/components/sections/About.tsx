@@ -25,11 +25,16 @@ export default function AboutSection() {
           business websites. My approach combines creative design with strong backend logic and a
           focus on data protection and system integrity.
         </p>
-        <p>
-          Beyond code, I’m inspired by the rich spiritual and intellectual tradition of the
-          Ethiopian Orthodox Tewahedo Church — grounding my work in discipline, purpose, and values
-          that guide both my professional and personal life.
-        </p>
+        <div className="relative overflow-hidden rounded-full ring-2 ring-foreground/10 shadow-lg mx-auto w-[180px] sm:w-[224px] md:w-[256px] lg:w-[288px] aspect-square animate-float-slow transition-transform duration-300 hover:scale-105">
+            <Image
+              src="/profile.jpg"
+              alt="Biruk Dessalegn"
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 1024px) 288px, (min-width: 768px) 256px, (min-width: 640px) 224px, 180px"
+            />
+          </div>
         </div>
         <div className="flex flex-col items-center md:items-end gap-4 mx-auto md:mx-0 md:justify-self-end">
           {/* Main portrait centered with subtle float */}
@@ -48,16 +53,17 @@ export default function AboutSection() {
           {/* Small circular profile that appears to float to the right */}
           
         </div>
-        <div className="relative overflow-hidden rounded-xl ring-2 ring-foreground/10 shadow-lg w-full sm:w-[260px] md:w-[280px] lg:w-[340px] aspect-[3/4] animate-float-slow transition-transform duration-300 hover:scale-105">
-            <Image
-              src="/profile.jpg"
-              alt="Biruk Dessalegn"
-              fill
-              priority
-              className="object-cover"
-              sizes="(min-width: 1024px) 340px, (min-width: 768px) 280px, (min-width: 640px) 260px, 100vw"
-            />
+        {/* Full-width highlight paragraph */}
+        <div className="md:col-span-2">
+          <div className="w-full rounded-xl bg-white/5 ring-1 ring-white/10 border-l-4 border-amber-400/50 p-5 md:p-6 shadow-lg backdrop-blur-sm">
+            <p className="text-[18px] md:text-[20px] leading-relaxed">
+              Beyond code, I’m inspired by the rich spiritual and intellectual tradition of the
+              <span className="mx-2 bg-gradient-to-r from-amber-300 to-rose-400 bg-clip-text text-transparent font-semibold">Ethiopian Orthodox Tewahedo Church</span>
+              — grounding my work in discipline, purpose, and values that guide both my professional and personal life.
+            </p>
           </div>
+        </div>
+        
         <div className="md:col-span-2 space-y-5">
           <div className="pt-2">
             <h3 className="text-2xl font-semibold text-white">💡 What I Do</h3>
