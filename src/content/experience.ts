@@ -3,6 +3,8 @@ export type Experience = {
   role: string;
   period: string;
   summary: string;
+  tech: string[];
+  image: string;
 };
 
 export const experiences: Experience[] = [
