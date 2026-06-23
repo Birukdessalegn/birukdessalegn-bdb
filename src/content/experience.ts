@@ -29,6 +29,8 @@ export const experiences: Experience[] = [
     role: "CEO & Cofounder of the club",
     period: "2024 — present",
     summary: "Digital Dreamers Club is an innovative community and platform dedicated to empowering individuals in the digital world. We focus on digital skills, technology awareness, and entrepreneurial growth, providing resources, mentorship, and collaborative opportunities to help members turn their ideas into real projects.",
+    tech: [],
+    image: ""
   },
 ];
 
