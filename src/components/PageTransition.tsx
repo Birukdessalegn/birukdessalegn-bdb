@@ -13,9 +13,7 @@ export default function PageTransition({ children }: Props) {
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    // Restart animation on route change
     el.classList.remove("page-fade-enter-active");
-    // Force reflow
     void el.offsetHeight;
     el.classList.add("page-fade-enter-active");
   }, [pathname]);
@@ -26,5 +24,4 @@ export default function PageTransition({ children }: Props) {
     </div>
   );
 }
-
 

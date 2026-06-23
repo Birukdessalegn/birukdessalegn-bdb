@@ -19,6 +19,7 @@ export default function Header() {
               className="object-cover"
               priority
             />
+            
           </span>
           <span className="sr-only">{siteConfig.name}</span>
           <span className="hidden sm:inline text-white/60">· {siteConfig.role}</span>
@@ -34,6 +35,7 @@ export default function Header() {
                   "text-sm transition-colors hover:text-white/90 hover-underline-glow pressable " +
                   (isActive ? "text-white" : "text-white/70")
                 }
+
                 onClick={(e) => {
                   // Add spotlight to targets within current page (anchors like #about)
                   if (item.href.startsWith("#")) {
