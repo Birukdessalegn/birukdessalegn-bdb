@@ -17,29 +17,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://birukdessalegn.dev"),
   title: {
-    default: siteConfig.name,
+    default: `${siteConfig.name} — ${siteConfig.role}`,
     template: `%s • ${siteConfig.name}`,
   },
   description: siteConfig.description,
   icons: {
-    // Uses the app router's built-in `src/app/favicon.ico` by default
     icon: [{ url: "/favicon.ico" }],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   openGraph: {
-    title: siteConfig.name,
+    title: `${siteConfig.name} — ${siteConfig.role}`,
     description: siteConfig.description,
-    url: "https://example.com",
+    url: "https://birukdessalegn.dev",
     siteName: siteConfig.name,
     locale: "en_US",
     type: "website",
+    images: [{ url: "/IMG_9748 (Edited).JPG" }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
+    images: ["/IMG_9748 (Edited).JPG"],
   },
 };
 

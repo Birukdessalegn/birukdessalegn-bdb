@@ -1,8 +1,12 @@
+export type ProjectCategory = "All" | "Full-Stack" | "Mobile" | "Cybersecurity";
+
 export type Project = {
   title: string;
   description: string;
   tech: string[];
+  category: ProjectCategory;
   link?: string;
+  github?: string;
   image?: string; 
 };
 
@@ -10,33 +14,38 @@ export const projects: Project[] = [
   {
     title: "Transport Management System (INSA)",
     description:
-      "A complete system enabling route planning, vehicle tracking, and service assignment. Integrates organizational and rental cars with waypoint-based routes and a real-time dashboard.",
-    tech: ["React", "Leaflet", "Spring Boot", "Mysql", "MongoDB","REST API"],
+      "A complete enterprise platform for vehicle route planning, real-time GPS tracking, and service assignments, supporting organizational and rental fleets.",
+    tech: ["React", "Leaflet", "Spring Boot", "MySQL", "MongoDB", "REST API"],
+    category: "Full-Stack",
     image: "/INSA-TMS.png",
-
+    github: "https://github.com/Birukdessalegn",
   },
   {
-    title: "OCU Care – Web and Mobile Eye Care App",
+    title: "OCU Care – Web & Mobile Eye Care App",
     description:
-      "A mobile app to improve eye health awareness and access to care. Users can book appointments, receive daily tips, and consult professionals via a simple interface.",
-    tech: ["React", "Flutter", "Mysql", "REST API"],
+      "A cross-platform mobile and web application to improve eye health awareness, appointment scheduling, daily eye care tips, and telehealth consultations.",
+    tech: ["Flutter", "React", "MySQL", "REST API"],
+    category: "Mobile",
     image: "/ocu-care.png",
+    github: "https://github.com/Birukdessalegn",
   },
   {
-    title: "Web Vulnerability Scanner",
+    title: "Automated Web Vulnerability Scanner",
     description:
-      "A security tool for scanning web apps for SQLi, XSS, and weak headers, with modules for reconnaissance, port scanning, and organized reporting.",
-    tech: ["Python", "Bash", "Kali Linux","OWASP ZAP"],
+      "A cybersecurity auditing tool that scans web applications for SQL Injection, XSS vulnerabilities, open ports, and missing security headers.",
+    tech: ["Python", "Bash", "Kali Linux", "OWASP ZAP"],
+    category: "Cybersecurity",
     image: "/web-vuln-scanner.png",
-    
+    github: "https://github.com/Birukdessalegn",
   },
   {
     title: "Mekenet Tech Solutions Website",
     description:
-      "Official company website showcasing services, portfolio, and team with smooth animations, professional layout, and responsive design.",
-    tech: ["React", "Tailwind CSS", "Framer Motion",],
+      "Official agency website highlighting technology solutions, team portfolio, and software engineering services with custom animations and responsive layout.",
+    tech: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+    category: "Full-Stack",
     image: "/mekenet.png",
-    link: "https://verdant-kataifi-3c5c1b.netlify.app/"
+    link: "https://verdant-kataifi-3c5c1b.netlify.app/",
+    github: "https://github.com/Birukdessalegn",
   },
 ];
-

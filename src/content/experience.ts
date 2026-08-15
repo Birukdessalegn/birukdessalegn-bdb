@@ -4,33 +4,37 @@ export type Experience = {
   period: string;
   summary: string;
   tech: string[];
-  image: string;
+  image?: string;
 };
 
 export const experiences: Experience[] = [
   {
-    company: "Information Network Security Administration",
+    company: "Information Network Security Administration (INSA)",
     role: "Software Engineer",
     period: "2025 — Present",
-    summary: "Building web apps, leading features, and improving performance.",
-    tech: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Spring Boot", "Mysql", "MongoDB","REST API"],
-    image: "./public/INSA-TMS.png",
+    summary:
+      "Engineered secure enterprise systems, including real-time vehicle tracking, route optimization, and service management modules with robust Spring Boot backends and interactive React interfaces.",
+    tech: ["Spring Boot", "React", "Next.js", "MySQL", "MongoDB", "Leaflet", "REST API"],
+    image: "/INSA-TMS.png",
   },
   {
     company: "Mekenet Tech Solutions",
-    role: "CEO & Full Stack Developer",
-    period: "2025 — present",
-    summary: "Building web apps, leading features, and improving performance.",
-    tech: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Spring Boot", "Mysql", "MongoDB","REST API"],
-    image: "./public/mekenet.png",
+    role: "CEO & Full-Stack Developer",
+    period: "2025 — Present",
+    summary:
+      "Leading technical vision and full-stack development for business clients, delivering scalable web applications, modern UI/UX design systems, and secure backend architectures.",
+    tech: ["React", "Next.js", "Tailwind CSS", "Framer Motion", "Node.js", "Express", "MySQL"],
+    image: "/mekenet.png",
   },
   {
-    company: "Digital Dreaamers club",
-    role: "CEO & Cofounder of the club",
-    period: "2024 — present",
-    summary: "Digital Dreamers Club is an innovative community and platform dedicated to empowering individuals in the digital world. We focus on digital skills, technology awareness, and entrepreneurial growth, providing resources, mentorship, and collaborative opportunities to help members turn their ideas into real projects.",
-    tech: [],
-    image: ""
+    company: "Digital Dreamers Club",
+    role: "CEO & Co-founder",
+    period: "2024 — Present",
+    summary:
+      "Co-founded an empowering tech community fostering digital skills, software development mentorship, tech entrepreneurship, and hands-on project collaboration.",
+    tech: ["Community Building", "Leadership", "Mentorship", "Tech Workshops"],
+    image: "/profile.jpg",
   },
 ];
+
 

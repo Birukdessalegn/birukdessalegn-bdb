@@ -1,31 +1,63 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { posts } from "../../content/posts";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Posts and writing.",
+  title: "Blog & Articles",
+  description: "Technical writing, cybersecurity insights, and full-stack software development articles by Biruk Dessalegn.",
 };
 
 export default function BlogPage() {
-  // Placeholder list; wire to content source later
-  const posts = [
-    { title: "Hello World", date: "2025-01-01" },
-    { title: "Building a Portfolio with Next.js", date: "2025-02-15" },
-  ];
-
   return (
-    <div>
-      <h1 className="text-2xl font-semibold tracking-tight">Blog</h1>
-      <ul className="mt-6 space-y-4">
+    <div className="max-w-4xl mx-auto space-y-8">
+      <div>
+        <h1 className="text-3xl font-bold tracking-tight text-white">Articles & Thoughts</h1>
+        <p className="mt-2 text-sm text-foreground/70">
+          Insights on full-stack architecture, cybersecurity, mobile applications, and software craftsmanship.
+        </p>
+      </div>
+
+      <div className="space-y-6">
         {posts.map((p) => (
-          <li key={p.title} className="rounded-lg border border-black/5 dark:border-white/10 p-5 bg-background/50">
-            <div className="flex items-center justify-between">
-              <h2 className="font-medium">{p.title}</h2>
-              <span className="text-sm text-foreground/60">{p.date}</span>
+          <article
+            key={p.slug}
+            className="group rounded-xl border border-white/10 p-6 bg-background/50 backdrop-blur-sm transition-all hover:border-white/25 hover:shadow-md"
+          >
+            <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-white/60 mb-2">
+              <span>{p.date}</span>
+              <span>{p.readTime}</span>
             </div>
-          </li>
+
+            <h2 className="text-xl font-semibold text-white group-hover:text-amber-300 transition-colors">
+              <Link href={`/blog/${p.slug}`}>{p.title}</Link>
+            </h2>
+
+            <p className="mt-3 text-sm text-foreground/80 leading-relaxed">{p.excerpt}</p>
+
+            <div className="mt-4 flex items-center justify-between gap-4">
+              <div className="flex flex-wrap gap-1.5">
+                {p.tags.map((t) => (
+                  <span
+                    key={t}
+                    className="text-xs font-mono rounded-md border border-white/10 bg-white/5 px-2.5 py-0.5 text-white/70"
+                  >
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <Link
+                href={`/blog/${p.slug}`}
+                className="text-xs font-medium text-white/80 hover:text-white inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
+              >
+                Read Article →
+              </Link>
+            </div>
+          </article>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
+
 
