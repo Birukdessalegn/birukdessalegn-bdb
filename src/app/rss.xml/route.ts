@@ -1,6 +1,8 @@
 import { siteConfig } from "../../content/site";
 import { posts } from "../../content/posts";
 
+export const dynamic = "force-static";
+
 export async function GET() {
   const baseUrl = "https://birukdessalegn.dev";
 
